@@ -27,7 +27,9 @@ The app works almost in real time; calibrations happen when a volume change is d
 
 At its current state, Volume Leveler is made to work with music; using it while watching a movie can result in a different/unwanted behaviour.
 
----
+## Download
+
+[Microsoft Store](https://apps.microsoft.com/detail/9p49zdt8z8hm)
 
 ## Donate
 
@@ -36,8 +38,6 @@ Every donation is greatly appreciated.
 - [LiberaPay](https://liberapay.com/roughnecks/)
 - [Ko-Fi](https://ko-fi.com/roughnecks)
 - [Paypal](https://www.paypal.me/simcana)
-
----
 
 ## License
 
