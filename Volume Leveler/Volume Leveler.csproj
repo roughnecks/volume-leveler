@@ -13,11 +13,11 @@
          from the embedded resource below, which IconFactory reads at
          runtime for Form.Icon and the NotifyIcon. -->
     <ApplicationIcon>assets\vl.ico</ApplicationIcon>
-    <!-- 1.2.0 release. Version also drives AssemblyVersion/FileVersion
-         by default (both become 1.2.0.0 unless overridden separately) -
+    <!-- 1.2.1 patch. Version also drives AssemblyVersion/FileVersion
+         by default (both become 1.2.1.0 unless overridden separately) -
          visible in the .exe's file properties and used by MSIX/Partner
          Center at submission time. Bump this on every future release. -->
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <!-- Task Manager's "Publisher" column, and Explorer's file
          properties "Company" field, both read this - without it, .NET
          falls back to the assembly name ("Volume Leveler"), which is

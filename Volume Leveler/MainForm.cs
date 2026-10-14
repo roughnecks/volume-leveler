@@ -50,7 +50,7 @@ namespace VolumeLeveler
     {
         private readonly MMDeviceEnumerator _deviceEnumerator = new();
 
-        private const string AppVersion = "1.2.0";
+        private const string AppVersion = "1.2.1";
 
         private Label _statusLabel = null!;
         private Button _startButton = null!;
@@ -360,7 +360,7 @@ namespace VolumeLeveler
 
         // URL opened by the tray context menu's website entry - see
         // OpenWebsite.
-        private const string WebsiteUrl = "https://volumeleveler.app";
+        private const string WebsiteUrl = "https://github.com/roughnecks/volume-leveler";
 
         // Global pause hotkey (Ctrl+Alt+L, fixed for now).
         [DllImport("user32.dll", SetLastError = true)]

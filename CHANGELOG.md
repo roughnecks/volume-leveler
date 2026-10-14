@@ -1,3 +1,9 @@
+# Patch Release v1.2.1
+
+## Changed
+
+- Moved to github for the project homepage.
+
 # Minor Release v1.2.0
 
 ## Improved

@@ -9,7 +9,7 @@
   <Identity
     Name="SimoneCanaletti.VolumeLeveler"
     Publisher="CN=D57C41B6-9206-4974-9EEB-B2AD4C5CB1EF"
-    Version="1.2.0.0" />
+    Version="1.2.1.0" />
 
   <Properties>
     <DisplayName>Volume Leveler</DisplayName>
