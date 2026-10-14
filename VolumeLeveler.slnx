@@ -1,0 +1,18 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <BuildType Name="x64" />
+    <Platform Name="Any CPU" />
+    <Platform Name="ARM" />
+    <Platform Name="ARM64" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="MSIX/MSIX.wapproj" Type="c7167f0d-bc9f-4e6e-afe1-012c56b48db5" Id="1032b049-8a0b-47af-8ba7-8eb6508e6fe5">
+    <Deploy />
+  </Project>
+  <Project Path="Volume Leveler/Volume Leveler.csproj">
+    <Platform Solution="x64|x64" Project="x64" />
+  </Project>
+</Solution>

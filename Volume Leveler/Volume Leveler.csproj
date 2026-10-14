@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>Volume_Leveler</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Sets the .exe's own icon (Explorer, taskbar pin) - independent
+         from the embedded resource below, which IconFactory reads at
+         runtime for Form.Icon and the NotifyIcon. -->
+    <ApplicationIcon>assets\vl.ico</ApplicationIcon>
+    <!-- 1.2.0 release. Version also drives AssemblyVersion/FileVersion
+         by default (both become 1.2.0.0 unless overridden separately) -
+         visible in the .exe's file properties and used by MSIX/Partner
+         Center at submission time. Bump this on every future release. -->
+    <Version>1.2.0</Version>
+    <!-- Task Manager's "Publisher" column, and Explorer's file
+         properties "Company" field, both read this - without it, .NET
+         falls back to the assembly name ("Volume Leveler"), which is
+         why it was showing that instead of an actual author. -->
+    <Company>Simone Canaletti</Company>
+    <Authors>Simone Canaletti</Authors>
+    <Product>Volume Leveler</Product>
+    <Copyright>Copyright © 2026 Simone Canaletti</Copyright>
+    <Configurations>Debug;Release;x64</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <!-- Declares Per-Monitor-V2 DPI awareness. ApplicationConfiguration.Initialize()
+         in Program.cs reads this at build time and emits the matching
+         Application.SetHighDpiMode(...) call, which invokes
+         SetProcessDpiAwarenessContext under the hood. Fixes the WACK
+         "DPIAwarenessValidation" warning (app not reporting as DPI-aware)
+         without needing a custom app.manifest. -->
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="3.1.0" />
+    <PackageReference Include="TaskScheduler" Version="2.12.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Embedded so the icon travels inside the assembly itself instead
+         of depending on a loose file next to the .exe (relevant once
+         this gets packaged into MSIX). Read at runtime by
+         IconFactory.CreateAppIcon via this fixed LogicalName. -->
+    <EmbeddedResource Include="assets\vl.ico">
+      <LogicalName>VolumeLeveler.vl.ico</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
